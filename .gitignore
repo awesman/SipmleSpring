@@ -28,3 +28,6 @@ target/
 
 # SDKMAN
 .sdkmanrc
+
+# Environment
+.env
