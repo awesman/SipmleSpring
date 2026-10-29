@@ -1,0 +1,15 @@
+CREATE TABLE task (
+    id            UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    title         VARCHAR(255) NOT NULL,
+    status        VARCHAR(50) NOT NULL,
+    position      INT NOT NULL,
+    category      VARCHAR(50),
+    skipped_count INT NOT NULL DEFAULT 0
+);
+
+INSERT INTO task (title, status, position, category)
+VALUES ('init task', 'in progress', 0, 'work');
+
+SELECT * FROM task;
+
+DROP TABLE IF EXISTS task;
